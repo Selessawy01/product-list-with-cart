@@ -1,0 +1,34 @@
+@use "./abstract/_breakpoint"as b;
+@use "./abstract/variables" as v;
+@use "./components/buttons";
+@use "./base/reset";
+@use "./base/typography";
+@use "./section/product";
+@use "./section/cart";
+@use "./section/confirmation";
+
+main {
+    width           : 100%;
+    display         : flex;
+    flex-direction  : column;
+    align-items     : center;
+    justify-content : center ;
+    
+    margin-inline   : auto;
+    gap             : v.$spacing-400;
+    padding         : v.$spacing-300;
+  
+    @media (min-width:b.$bp-md){
+    padding         :  v.$spacing-500;
+    }
+
+    @media (min-width:b.$bp-xl){
+        width                 : 100%;
+        display               : grid;
+        grid-template-columns : 50rem 21.75rem;
+        justify-content       : center;
+        align-items           : flex-start;
+        gap                   : v.$spacing-400;
+        padding-block         : v.$spacing-1100;
+    }
+}

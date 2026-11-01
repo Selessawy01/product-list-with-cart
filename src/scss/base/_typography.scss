@@ -1,0 +1,33 @@
+@use "../abstract/variables" as v;
+
+.xl-text {
+    font-size      : v.$fs-400;
+    font-weight    : v.$fw-bold;
+    line-height    : 1.2
+}
+
+.lg-text {
+    font-size      : v.$fs-300;
+    font-weight    : v.$fw-bold;
+    line-height    : 1.25;
+}
+
+.md-text {
+    font-size      : v.$fs-200;
+    font-weight    : v.$fw-semiBold ;
+    line-height    : 1.5;
+}
+
+.sm-text {
+    font-size      : v.$fs-100;
+    font-weight    : v.$fw-regular;
+    line-height    : 1.5;
+    
+}
+
+.sm-text-semibold {
+    font-size      : v.$fs-100;
+    font-weight    : v.$fw-semiBold;
+    line-height    : 1.5%;
+    
+}

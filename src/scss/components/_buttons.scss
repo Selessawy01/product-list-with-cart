@@ -1,0 +1,20 @@
+@use "../abstract/variables"  as v;
+
+.button--primary {
+    padding         : v.$spacing-200 v.$spacing-300;
+    background      : v.$btn-bg;
+    color           : v.$btn-txt;
+    border-radius   : v.$radius-pill;
+    border          : none;
+    cursor          : pointer;
+
+    &:hover {
+    background-color: color-mix(in srgb, black 25%, v.$red);
+    }
+
+    &:focus-visible {
+        outline        : 3px solid v.$primary-txt-clr;
+        outline-offset : 3px;
+    }
+}
+

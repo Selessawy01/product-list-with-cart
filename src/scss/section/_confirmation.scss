@@ -1,0 +1,139 @@
+@use "../abstract/variables" as v;
+@use "../abstract/_breakpoint" as b;
+
+
+.confirmation-overlay {
+  position      : fixed;
+  inset         : 0;
+  z-index       : 1000;
+
+  display           : flex;
+  justify-content   : center;
+  align-items       : center;
+
+  background-color  : rgb(0 0 0 / 50%);
+
+  overflow-y        : auto;
+ 
+}
+
+.confirmation{
+    
+    position    : relative;
+    z-index     : 1;
+
+    max-width   : 23.4375rem;
+    width       : 100%;
+    max-height  : 100%;
+    overflow-y : auto;
+
+    padding       : v.$spacing-500 v.$spacing-300 v.$spacing-300 v.$spacing-300;
+    border-radius : v.$radius-primary;
+    background    : v.$bg-clr-secondary;
+
+    display        : flex;
+    flex-direction : column;
+    gap            : v.$spacing-400;
+
+
+    @media (min-width:b.$bp-md){
+    max-width : 43rem;
+    padding   : v.$spacing-500;
+    }
+
+    @media (min-width : b.$bp-xl){
+    max-width  : 37rem;
+    }
+}
+
+.confirmation__header {
+    display        : flex;
+    flex-direction : column;
+    gap            : v.$spacing-300;
+}
+
+.confirmation__logo {
+    width   : 3rem;
+    height  : 3rem;
+}
+.confirmation__text{
+    display        : flex;
+    flex-direction : column;
+    gap            : v.$spacing-100;
+}
+
+.confirmation__text h2{
+  color   :      v.$primary-txt-clr
+}
+
+.confirmation__text p{
+  color       : v.$secondary-txt-clr;
+  font-weight : v.$fw-regular;
+}
+.confirmation__content{
+  padding       : v.$spacing-300;
+  background    : v.$bg-clr-primary;
+  border-radius : v.$radius-secondary;
+
+}
+.confirmation__list {
+  list-style : none;
+  margin     : 0;
+}
+
+.confirmation__item {
+  border-bottom  : 1px solid v.$rose-100;
+  padding-block  : v.$spacing-200;
+
+  display         : flex;
+  justify-content : space-between;
+  align-items     : center;
+}
+.confirmation__item:first-child{
+    padding-block-start : 0;
+}
+.confirmation__item:last-child {
+    padding-block-end: v.$spacing-300;
+}
+
+.confirmation__item-content {
+    display         : flex;
+    align-items     : center;
+    justify-content : center;
+    gap             : v.$spacing-200;
+}
+.confirmation__item-logo{
+    width           : 3rem;
+    height          : 3rem;
+    border-radius   :  0.25rem;
+    object-fit      : cover;
+}
+.confirmation__item-info {
+    display         : flex;
+    flex-direction  : column;
+    align-items     : flex-start;
+    justify-content : center;
+    gap             : v.$spacing-100;
+}
+
+.confirmation__item-price {
+    display         : flex;
+    align-items     : center;
+    justify-content : center;
+    gap             : v.$spacing-100;
+}
+.confirmation__item-quantity{
+    color           : v.$red;
+}
+
+.confirmation__item-quantityprice{
+    color           : v.$secondary-txt-clr;
+}
+.confirmation__total {
+    display          : flex;
+    align-items      : center;
+    justify-content  : space-between;
+    color            : v.$primary-txt-clr;
+    margin-top       : v.$spacing-300;
+}
+
